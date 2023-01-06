@@ -7,7 +7,10 @@
   --team-color: #f5f4fa;
   --navi-color: rgba(255, 255, 255, 0.6);
   --border-color: #ECECEC;
-  --bordert-color : #EEEEEE;
+  --bordert-color: #EEEEEE;
+  --background-icon: #F5F4FA;
+  --icon-color2: #FFFFFF;
+  --icon-color1: #AFB1B8;
 }
 * {
   margin: 0px;
@@ -82,17 +85,9 @@ body {
   display: flex;
   gap: 10px;
 }
-.contact-envelope{
+.contact-icon{
   display: flex;
-  width: 16px;
-  height: 12px;
-  fill: #757575;
-}
-.contact-phone{
-  display: flex;
-  width: 10px;
-  height: 16px;
-  fill: #757575;
+  fill: currentColor;
 }
 .contact-link{
   font-style: normal;
@@ -115,19 +110,16 @@ body {
 .contact-link:active{
   color: var(--blue-color);
 }
-.contact-envelope:hover,
-.contact-envelope:focus,
-.contact-envelope:active{
-  fill: var(--blue-color);
-}
-.contact-phone:hover,
-.contact-phone:focus,
-.contact-phone:active{
+.contact-icon:hover,
+.contact-icon:focus,
+.contact-icon:active{
   fill:var(--blue-color);
 }
 .face {
   background-color: var(--wall-color);
-  background-image: url(/images/img-17.jpg), linear-gradient( #2f303a, #2F303A);
+  background-image: url(/images/img-17.jpg);
+  background-position: 50% 50%;
+  box-shadow: 0px 0px 0px 300px rgba(47,48,58,0.39) inset;
   max-width: 1600px;
   padding-top: 200px;
   padding-bottom: 200px;
@@ -167,33 +159,25 @@ body {
   gap: 30px;
 }
 .wall-antenna{
-  width: 65.32px;
-  height: 70px;
-  background: #F5F4FA;
+  background: var(--background-icon);
   border-radius: 4px;
   padding: 25px 102.34px 25px 102.34px;
   margin-bottom: 30px;
 }
 .wall-clock{
-width: 66.96px;
-height: 70px;
-background: #F5F4FA;
+background: var(--background-icon);
 border-radius: 4px;
 padding: 25px 101.54px 25px 101.5px;
 margin-bottom: 30px;
 }
 .wall-diagram{
-width: 70px;
-height: 53.69px;
-background: #F5F4FA;
+background: var(--background-icon);
 border-radius: 4px;
 padding: 33.2px 100px 33.11px 100px;
 margin-bottom: 30px;
 }
 .wall-astronaut{
-  width: 70px;
-  height: 70px;
-  background: #F5F4FA;
+  background: var(--background-icon);
   border-radius: 4px;
   padding: 25px 100px 25px 100px;
   margin-bottom: 30px;
@@ -268,68 +252,21 @@ border-radius: 0px 0px 4px 4px;
 }
 .team-icons{
   display: flex;
-  gap: 32px;
+  gap: 10px;
+  fill: var(--icon-color1);
   justify-content: center;
-  margin-top: 29.88px;
-  margin-bottom: 43.87px;
-  fill: #AFB1B8;
+  margin-top: 16px;
+  margin-bottom: 30px;
+  cursor: pointer;
 }
-.team-insta{
-  width: 20px;
-  height: 20px;
-}
-.team-twit{
-  width: 20px;
-  height: 16.25px;
-}
-.team-fb{
-  width: 20px;
-  height: 20px;
-}
-.team-linke{
-  width: 20px;
-  height: 20px;
-}
-.team-insta:hover,
-.team-insta:active,
-.team-insta:focus{
-  padding: 12px;
-  background-color: #2196f3;
-  fill:var(--white-color);
-  border-color: none;
-  border-radius: 43%;
-}
-.team-twit:hover,
-.team-twit:active,
-.team-twit:focus{
-  padding: 12px;
-  background-color: #2196f3;
-  fill:var(--white-color);
-  border-color: none;
-  border-radius: 43%;
-}
-.team-fb:hover,
-.team-fb:active,
-.team-fb:focus{
- padding: 12px;
-  background-color: #2196f3;
-  fill:var(--white-color);
-  border-color: none;
-  border-radius: 43%; 
-}
-.team-linke:hover,
-.team-linke:active,
-.team-linke:focus{
-   padding: 12px;
-  background-color: #2196f3;
-  fill:var(--white-color);
-  border-color: none;
-  border-radius: 25%
+.team-icon:hover{
+  fill: var(--icon-color2);
+  background-color: var(--blue-color);
+  border-radius: 50%;
 }
 .clients{
   display: flex;
   text-align: center;
-
 }
 .clients-title{
   font-weight: 700;
@@ -343,14 +280,12 @@ margin-bottom: 50px;
   justify-content: center;
   gap: 30px;
   margin-bottom: 94px;
+  cursor: pointer;
 }
 .client-log{
-  width: 106px;
-  height: 60px;
-  border: 1px solid #AFB1B8;
+  border: 1px solid var(--icon-color1);
   border-radius: 4px;
-  fill: #AFB1B8;
-  padding: 16px 32px 16px 32px;
+  fill: var(--icon-color1);
 }
 .client-log:hover,
 .client-log:active,
@@ -403,6 +338,7 @@ margin-bottom: 50px;
 .offert-items {
   border: 1px solid var(--bordert-color);
   margin-bottom: 30px;
+  cursor: pointer;
 }
 .offert-items:hover{
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
@@ -448,6 +384,13 @@ padding-top: 6px;
 padding-bottom: 6px;
 padding-left: 22px;
 padding-right: 22px;
+cursor: pointer;
+}
+.bottom-collection{
+  text-decoration: none;
+  list-style-type: none;
+  display: flex;
+  gap: 70px;
 }
 .joinus-text{
   font-weight: 700;
@@ -455,29 +398,22 @@ font-size: 14px;
 line-height: 16px;
 letter-spacing: 0.03em;
 text-transform: uppercase;
-color: #FFFFFF;
+color: var(--icon-color2);
 margin-bottom: 20px;
 display: flex;
 }
 .joinus-icons{
   display: flex;
   gap:10px;
+  cursor: pointer;
 }
 .joinus-icon{
-  width: 20px;
-  height: 20px;
-  fill:#FFFFFF;
+  fill: var(--icon-color2);
   background: rgba(255, 255, 255, 0.1);
-  padding: 12px;
+  border-radius: 50%;
 }
-.joinus-icon:hover,
-.joinus-icon:active,
-.joinus-icon:focus{
-  fill:var(--white-color);
-  background-color: var(--blue-color);
-  border-color: none;
-  border-radius: 43%;
-  
+.joinus-icon:hover{
+  background: var(--blue-color);
 }
 .button-items:hover {
 background-color: var( --blue-color);
