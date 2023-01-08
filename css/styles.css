@@ -99,6 +99,7 @@ body {
   color: var(--gray-color);
   display: flex;
   gap: 10px;
+  align-items: center;
 }
 .menu-link:hover,
 .menu-link:focus,
@@ -267,9 +268,10 @@ border-radius: 0px 0px 4px 4px;
 .clients{
   display: flex;
   text-align: center;
+  justify-content: center;
 }
 .clients-title{
-  font-weight: 700;
+font-weight: 700;
 font-size: 36px;
 line-height: 42px;
 letter-spacing: 0.03em;
@@ -277,15 +279,16 @@ margin-bottom: 50px;
 }
 .clients-logos{
   display: flex;
-  justify-content: center;
-  gap: 30px;
   margin-bottom: 94px;
   cursor: pointer;
+  gap:30px;
+  justify-content: center;
+  padding-right: 15px;
 }
 .client-log{
-  border: 1px solid var(--icon-color1);
-  border-radius: 4px;
   fill: var(--icon-color1);
+  border: 1px solid #AFB1B8;
+  border-radius: 4px;
 }
 .client-log:hover,
 .client-log:active,
