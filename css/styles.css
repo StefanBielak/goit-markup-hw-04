@@ -127,6 +127,7 @@ body {
   justify-content: center;
   display:flex;
   text-align: center;
+  margin: auto;
 }
 .face-title {
   font-weight: 900;
